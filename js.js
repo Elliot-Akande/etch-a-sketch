@@ -40,9 +40,5 @@ items.forEach(item => item.addEventListener("mouseenter", function(e){
 const clear = document.querySelector("#clear");
 clear.addEventListener("click", function(e){
     const gridSize = parseInt(prompt("Enter Size of New Grid: ", 16));
-    if(gridSize >= 1 && gridSize <= 100){
-        createGrid(gridSize);
-    } else {
-        alert("Invalid Input");
-    }
+    if(gridSize >= 1 && gridSize <= 100) createGrid(gridSize);
 })

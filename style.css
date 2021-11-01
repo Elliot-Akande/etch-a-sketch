@@ -7,20 +7,32 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
+    align-items: center;
 }
 
 #clear {
-    margin: 2rem;
-    margin-bottom: 0;
+    padding: 1rem;
+    background-color: white;
+    border: 0.2rem solid black;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.678);
+    flex: 1;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3rem;
 }
 
 #grid {
     border: 0.2rem solid black;
-    margin: 2rem;
-    flex-basis: 100%;
+    margin: 2.5rem;
     display: flex;
     flex-direction: column;
-    flex: 1 1 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    box-shadow: 0 0 3rem black;
+    border-radius: 0.6rem;
+    width: 40rem;
+    height: 40rem;
 }
 
 .grid-row {
@@ -30,5 +42,67 @@ body {
 
 .grid-item {
     flex: auto;
-    /* background-color: black; */
+    transition: 0.5s;
+}
+
+#buttons {
+    justify-content: space-between;
+    display: flex;
+    margin: 4rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    gap: 2rem;
+    width: 40rem;
+}
+
+#colors {
+    align-items: stretch;
+    gap: 1rem;
+    display: flex;
+    border: 0.2rem solid black;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.678);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.color-container {
+    box-shadow: 0 0 6px black;
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
+
+.color-button {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    border: none;
+}
+
+#red {
+    background-color: darkred;
+}
+
+#red:hover {
+    background-color: rgb(121, 0, 0);
+}
+
+#blue {
+    background-color: cadetblue;
+}
+
+#green {
+    background-color: forestgreen;
+}
+
+#yellow {
+    background-color: darkgoldenrod;
+}
+
+#black {
+    background-color: black;
+}
+
+#clear:hover,
+.color-container:hover {
+    background-color: rgb(228, 228, 228);
 }
