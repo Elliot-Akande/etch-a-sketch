@@ -1,0 +1,34 @@
+html, 
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+#clear {
+    margin: 2rem;
+    margin-bottom: 0;
+}
+
+#grid {
+    border: 0.2rem solid black;
+    margin: 2rem;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+}
+
+.grid-row {
+    display: flex;
+    flex: auto;
+}
+
+.grid-item {
+    flex: auto;
+    /* background-color: black; */
+}
