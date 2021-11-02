@@ -8,6 +8,7 @@ body {
     flex-direction: column;
     margin: 0;
     align-items: center;
+    background-image: url("images/background.png");
 }
 
 #clear {
@@ -20,11 +21,12 @@ body {
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.3rem;
+    transition: 0.3s;
 }
 
-#grid {
-    border: 0.2rem solid black;
-    margin: 2.5rem;
+.grid {
+    border: 0.3rem solid black;
+    margin: 3rem;
     display: flex;
     flex-direction: column;
     flex-grow: 0;
@@ -33,6 +35,12 @@ body {
     border-radius: 0.6rem;
     width: 40rem;
     height: 40rem;
+    transition: 0.4s;
+    background-color: white;
+}
+
+.gridClear{
+    transform: scale(0.9);
 }
 
 .grid-row {
@@ -42,7 +50,7 @@ body {
 
 .grid-item {
     flex: auto;
-    transition: 0.5s;
+    transition: 0.4s;
 }
 
 #buttons {
@@ -63,46 +71,57 @@ body {
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.678);
     border-radius: 0.5rem;
     padding: 1rem;
+    background-color: white;
 }
 
 .color-container {
-    box-shadow: 0 0 6px black;
-    padding: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 2rem;
 }
 
 .color-button {
-    width: 2.5rem;
-    height: 2.5rem;
+    box-shadow: 0 0 6px black;
+    padding: 0.5rem;
     border-radius: 2rem;
     border: none;
+    background-color: white;
+    transition: 0.2s;
 }
 
-#red {
+#red .color-container {
     background-color: darkred;
 }
 
-#red:hover {
-    background-color: rgb(121, 0, 0);
-}
-
-#blue {
+#blue .color-container {
     background-color: cadetblue;
 }
 
-#green {
+#green .color-container {
     background-color: forestgreen;
 }
 
-#yellow {
+#yellow .color-container {
     background-color: darkgoldenrod;
 }
 
-#black {
+#white .color-container {
+    background-color: rgb(241, 241, 241);
+}
+
+#black .color-container {
     background-color: black;
 }
 
-#clear:hover,
-.color-container:hover {
+#clear:hover {
+    background-color: rgb(243, 213, 213);
+}
+
+.color-button:hover {
+    transform: scale(1.1);
+}
+
+.color-button:active,
+#clear:active {
     background-color: rgb(228, 228, 228);
 }
