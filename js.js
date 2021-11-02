@@ -62,7 +62,7 @@ function changeBrushColor(e){
 }
 
 function resizeGrid() {
-    const gridSize = parseInt(prompt("Enter Grid Size: ", 16));
+    const gridSize = parseInt(prompt("Enter Grid Size (1 - 100): ", 16));
     if(gridSize >= 1 && gridSize <= 100){
         const grid = document.querySelector(".grid");
         grid.classList.add("gridClear");
