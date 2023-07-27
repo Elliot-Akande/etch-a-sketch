@@ -1,15 +1,16 @@
 let brushColor = "black";
+let currentGridSize = 16;
 
-function createGrid(gridSize){
+function createGrid(){
     const grid = document.querySelector(".grid");
 
-    clearGrid(grid);
+    removePixels(grid);
         
-    for(let i = 0; i < gridSize; i++){
+    for(let i = 0; i < currentGridSize; i++){
         const row = document.createElement("div");
         row.classList.add("grid-row");
 
-        for(let x = 0; x < gridSize; x++){
+        for(let x = 0; x < currentGridSize; x++){
         const item = document.createElement("div");
         item.classList.add("grid-item");
         row.appendChild(item);
@@ -29,7 +30,7 @@ function removeTransition(e) {
     e.target.classList.remove('gridClear');
   }
 
-function clearGrid(grid){
+function removePixels(grid){
     let child = grid.lastElementChild; 
     while (child) {
         grid.removeChild(child);
@@ -61,19 +62,29 @@ function changeBrushColor(e){
     }
 }
 
+function clearGrid() {
+    const grid = document.querySelector(".grid");
+    grid.classList.add("gridClear");
+    createGrid();
+}
+
 function resizeGrid() {
-    const gridSize = parseInt(prompt("Enter Grid Size (1 - 100): ", 16));
+    const gridSize = parseInt(prompt("Please enter a number from 1 to 100", 16));
     if(gridSize >= 1 && gridSize <= 100){
+        currentGridSize = gridSize;
         const grid = document.querySelector(".grid");
         grid.classList.add("gridClear");
-        createGrid(gridSize);
+        createGrid();
     } 
 }
 
-createGrid(16);
+createGrid();
 
 const clear = document.querySelector("#clear");
-clear.addEventListener("click", resizeGrid);
+clear.addEventListener("click", clearGrid);
+
+const resize = document.querySelector("#resize");
+resize.addEventListener("click", resizeGrid);
 
 const grid = document.querySelector(".grid");
 grid.addEventListener('transitionend', removeTransition);
