@@ -11,10 +11,10 @@ body {
     background-image: url("images/background.png");
 }
 
-#clear {
-    padding: 1rem;
+.control {
+    padding: 1rem 2rem;
     background-color: white;
-    border: 0.2rem solid black;
+    border: 0.3rem solid black;
     border-radius: 0.5rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.678);
     flex: 1;
@@ -26,7 +26,8 @@ body {
 
 .grid {
     border: 0.3rem solid black;
-    margin: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
     flex-grow: 0;
@@ -60,7 +61,7 @@ body {
     margin: 4rem;
     margin-top: 0;
     margin-bottom: 2rem;
-    gap: 2rem;
+    gap: 1rem;
     width: 960px;
 }
 
@@ -68,10 +69,10 @@ body {
     align-items: stretch;
     gap: 1rem;
     display: flex;
-    border: 0.2rem solid black;
+    border: 0.3rem solid black;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.678);
     border-radius: 0.5rem;
-    padding: 1rem;
+    padding: 1rem 2rem;
     background-color: white;
 }
 
@@ -114,7 +115,7 @@ body {
     background-color: black;
 }
 
-#clear:hover {
+.control:hover {
     background-color: rgb(243, 213, 213);
 }
 
@@ -123,6 +124,6 @@ body {
 }
 
 .color-button:active,
-#clear:active {
+.control:active {
     background-color: rgb(228, 228, 228);
 }
