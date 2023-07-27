@@ -37,6 +37,7 @@ body {
     height: 40rem;
     transition: 0.4s;
     background-color: white;
+    overflow: hidden;
 }
 
 .gridClear{
