@@ -1,4 +1,4 @@
-+ Etch-A-Sketch
+++ Etch-A-Sketch
 
 This is a webpage that allows the user to draw in a similar style to an 'etch-a-sketch'. It was created to put to practice **manipulating the DOM** and working with **Event Listeners** using *JavaScript*
 
