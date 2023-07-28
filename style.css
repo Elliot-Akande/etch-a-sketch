@@ -14,12 +14,11 @@ body {
 }
 
 .control {
-    padding: 1rem 2rem;
+    padding: 0.85rem 1.7rem;
     background-color: white;
     border: 0.3rem solid black;
     border-radius: 0.5rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.678);
-    flex: 1;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.3rem;
@@ -36,8 +35,8 @@ body {
     flex-shrink: 0;
     box-shadow: 0 0 3rem black;
     border-radius: 0.6rem;
-    width: 960px;
-    height: 960px;
+    width: min(751px - 0.3rem, 75vh);
+    height: min(751px - 0.3rem, 75vh);
     transition: 0.4s;
     background-color: white;
     overflow: hidden;
@@ -58,13 +57,10 @@ body {
 }
 
 #buttons {
-    justify-content: space-between;
     display: flex;
-    margin: 4rem;
     margin-top: 0;
     margin-bottom: 2rem;
     gap: 1rem;
-    width: 960px;
 }
 
 #colors {
@@ -74,13 +70,13 @@ body {
     border: 0.3rem solid black;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.678);
     border-radius: 0.5rem;
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     background-color: white;
 }
 
 .color-container {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.3rem;
+    height: 2.3rem;
     border-radius: 2rem;
 }
 
