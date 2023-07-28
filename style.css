@@ -1,6 +1,7 @@
-html, 
+html,
 body {
     height: 100%;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 body {
@@ -42,7 +43,7 @@ body {
     overflow: hidden;
 }
 
-.gridClear{
+.gridClear {
     transform: scale(0.9);
 }
 
@@ -127,4 +128,14 @@ body {
 .color-button:active,
 .control:active {
     background-color: rgb(228, 228, 228);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    font-size: 20px;
+}
+
+footer p {
+    color: black;
 }
